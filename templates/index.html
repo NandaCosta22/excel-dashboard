@@ -1,0 +1,40 @@
+  <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard de Gráficos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Upload de Planilha Excel</h1>
+
+ <form method="POST" enctype="multipart/form-data">
+  <label for="tipo">Escolha o tipo de gráfico:</label>
+  <select name="tipo" id="tipo">
+    <option value="bar">Barras</option>
+    <option value="pie">Pizza</option>
+    <option value="line">Linha</option>
+  </select>
+
+  <br><br>
+
+  <input type="file" name="arquivo" accept=".xlsx" required>
+
+  <button type="submit" id="btn-submit">
+    <span id="btn-text">Gerar Gráfico</span>
+  </button>
+
+  <div id="progress-bar" style="display: none;">
+    <div id="progress-fill"></div>
+  </div>
+</form>
+
+<div id="grafico">
+  {% if grafico %}
+    {{ grafico|safe }}
+  {% endif %}
+</div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
