@@ -1,11 +1,12 @@
-from flask import flask, request, render_template
+from flask import Flask, request, render_template
 from processador import gerar_grafico
 import os
+
+app = Flask(__name__)
+
 port = int(os.environ.get("PORT", 5000))
 app.run(host='0.0.0.0', port=port)
 
-
-app = flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
