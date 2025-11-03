@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import flask, request, render_template
 from processador import gerar_grafico
 import os
 port = int(os.environ.get("PORT", 5000))
