@@ -3,6 +3,11 @@
 Dashboard de Gráficos Interativos com Flask e Plotly — transforme planilhas Excel em visualizações dinâmicas com apenas alguns cliques.
 
 ---
+## 🔗 Link do Projeto
+
+Projeto hospedado no Render:  
+[https://excel-dashboard-5.onrender.com](https://excel-dashboard-5.onrender.com)
+
 
 ## 🚀 Tecnologias Utilizadas
 
